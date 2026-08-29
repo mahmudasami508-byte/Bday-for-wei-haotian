@@ -489,15 +489,7 @@
     opacity:0;
     pointer-events:none;
   }
-  .qr-box{
-    width:120px; height:120px;
-    background:#fff;
-    border-radius:14px;
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 10px 24px -8px rgba(232,79,129,0.4);
-    margin-top:16px;
-    padding:8px;
-  }
+  
 
   .progress-dots{
     position:absolute;
@@ -534,7 +526,7 @@
       <div class="title-wrap">
         <div class="cake-emoji">🎂</div>
         <div class="eyebrow">A little something for you</div>
-        <h1 class="name-heading" id="nameHeading">Happy Birthday, Wei Haotian</h1>
+        <h1 class="name-heading" id="nameHeading">Happy Birthday,  Wei Haotian</h1>
       </div>
       <p class="subtext">Are you excited for what's next?</p>
       <div class="btn-row">
@@ -894,7 +886,7 @@
 
   /* ============ SCREEN 6: Gift ============ */
   const giftWrap = document.getElementById('giftWrap');
-
+  const finalCard = document.getElementById('finalCard');
   
 
   giftWrap.addEventListener('click', ()=>{
@@ -905,6 +897,7 @@
     setTimeout(()=> burstConfetti({particleCount:80, spread:130, origin:{x:0.8,y:0.4}}), 350);
     setTimeout(()=>{
       document.getElementById('screen-gift').classList.add('opened');
+      finalCard.classList.add('show');
       renderQR();
     }, 500);
   });
