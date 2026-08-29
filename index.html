@@ -894,7 +894,6 @@
 
   /* ============ SCREEN 6: Gift ============ */
   const giftWrap = document.getElementById('giftWrap');
-  const finalCard = document.getElementById('finalCard');
 
   
 
@@ -906,7 +905,6 @@
     setTimeout(()=> burstConfetti({particleCount:80, spread:130, origin:{x:0.8,y:0.4}}), 350);
     setTimeout(()=>{
       document.getElementById('screen-gift').classList.add('opened');
-      finalCard.classList.add('show');
       renderQR();
     }, 500);
   });
