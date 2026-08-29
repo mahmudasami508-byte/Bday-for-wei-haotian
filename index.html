@@ -648,7 +648,7 @@
 
   /* ============ CONFIG — edit these to personalize ============ */
   const CONFIG = {
-    name: "Aarav",
+    name: "Wei Haotian",
     letterMessage: "Happy Birthday! From the very first candle to this one, every year with you has been a gift of its own. I hope today is soft, joyful, and exactly as sweet as you are. Here's to everything wonderful still on its way to you. — with love, always.",
     heartNotes: ["My heart, always", "Forever yours", "You make everything brighter", "So grateful for you", "Endlessly proud of you", "Today & every day"],
     qrTargetUrl: "https://example.com"
@@ -895,18 +895,8 @@
   /* ============ SCREEN 6: Gift ============ */
   const giftWrap = document.getElementById('giftWrap');
   const finalCard = document.getElementById('finalCard');
-  const qrBox = document.getElementById('qrBox');
 
-  function renderQR(){
-    // simple generated QR-like placeholder using a public QR image API
-    const img = document.createElement('img');
-    img.src = `https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=${encodeURIComponent(CONFIG.qrTargetUrl)}`;
-    img.alt = 'Scan for a surprise';
-    img.width = 100; img.height = 100;
-    img.style.borderRadius = '8px';
-    img.onerror = ()=>{ qrBox.textContent = '🎁'; qrBox.style.fontSize='42px'; };
-    qrBox.appendChild(img);
-  }
+  
 
   giftWrap.addEventListener('click', ()=>{
     if(giftWrap.classList.contains('open')) return;
